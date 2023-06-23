@@ -248,16 +248,7 @@ class MainPage(unittest.TestCase):
             )
             ###############################################################################
 
-        # info = [namer.text, lastnamer.text, company.text, StreetAdd.text, City.text, postcode.text, Number.text]
-        # try:
-        #     divText = self.driver.find_element(By.CLASS_NAME, "checkout-billing-address").text
-        #     if info == divText:
-        #         print("it has the same text")
-        #     else:
-        #         print("picked the wrong things")
-        # except:
-        #     print("Something has gone wrong")
-        ##############
+
 
         next = self.driver.find_element(By.CSS_SELECTOR, ".button.action.continue.primary")
         webdriver.ActionChains(self.driver).move_to_element(next).click(next).perform()
@@ -281,14 +272,7 @@ class MainPage(unittest.TestCase):
         else:
             print("order does not exist")
 
-        # self.driver.find_element(By.CLASS_NAME, "radio").click()
-        # print("shipping method is clicked")
 
-        # textofC = self.driver.find_element(By.NAME, "country_id").text
-        # if textofC in CountryS:
-        #     self.driver.find_element(By.XPATH, "radio").click()
-        # else:
-        #     self.driver.find_element(By.XPATH, "radio").click()
 
     def tearDown(self):
         self.driver.close()
